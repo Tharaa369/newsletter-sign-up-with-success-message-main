@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+    --Tomato: hsl(4, 100%, 67%);
+}
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif ;
+    font-size: 16px;
+}
+main{
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+}
+#Sign-up{
+    margin: auto;
+    width: 90%;
+    display: flex;
+    height: 100%;
+}
+.left{
+    width: 55%;
+    margin-top: 5rem;
+}
+.left h1{
+    font-size: 3em;
+    margin-bottom: 1.5rem;
+}
+.left p{
+    line-height: 1.5em;
+    margin-bottom: 1rem;
+}
+.left ul li{
+    list-style-image: url("images/icon-list.svg");
+    list-style-position: inside ;
+    margin-bottom: .5rem;
+}
+.left form label{
+    font-weight: 700;
+    display: block;
+    margin-top: 1.5rem;
+    margin-bottom: .5rem;
+}
+.left form input{
+    width: 100%;
+    max-width: 25rem;
+    height: 3rem;
+    border-radius: 5px;
+    outline: none;
+    padding: .5rem;
+    margin-bottom: 1rem;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.left form input[type=email]{
+    border-color: var(--Grey);
+    border-width: 2px;
+}
+.left form input[type=email]:focus{
+    border-color: var(--Dark-Slate-Grey);
+}
+.invalid{
+    border-color: var(--Tomato) !important;
+    color: var(--Tomato);
+    background-color:hsla(4, 100%, 67%, 0.274);
+}
+
+#invalidTxt{
+    color: var(--Tomato);
+    font-size: 12px;
+    text-align: right;
+    margin-bottom: 0;
+    font-weight: 700;
+    display: none;
+}
+.left form input[type=submit] {
+    border: none;
+    background-color: var(--Dark-Slate-Grey);
+    color: var(--White);
+    cursor: pointer;
+}
+.left form input[type=submit]:hover{
+    background-color: var(--Tomato);
+}
+.right{
+    width: 40%;
+    margin-left: 1rem;
+    background-image: url("images/illustration-sign-up-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* ----------------- message -------------- */
+.ali-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Dark-Slate-Grey);
+}
+#success-msg{
+    width: 400px;
+    height: 400px;
+    background-color: var(--White);
+    border-radius: 15px;
+    padding: 2rem;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    display: none;
+}
+#success-msg img{
+    width: 40px;
+    margin-bottom: 20px;
+}
+#success-msg h1{
+    font-size: 2em;
+    color: var(--Dark-Slate-Grey);
+    margin-bottom: 10px;
+}
+#success-msg p{
+    color: var(--Charcoal-Grey);
+    margin-bottom: 30px;
+}
+#success-msg p span{
+    font-weight: 700;
+}
+#success-msg button{
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--Dark-Slate-Grey);
+    color: var(--White);
+    font-weight: 700;
+    cursor: pointer;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+#success-msg button:hover{
+    background-color: var(--Tomato);
+}
+
+@media screen and (max-width:375px) {
+    main {
+        padding: 0;
+    }
+
+    #Sign-up {
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 100%;
+    }
+
+    .left {
+        width: 100%;
+        height: 65%;
+        padding: 1rem;
+        margin-top: 1rem;
+
+    }
+
+    .right {
+        border-radius: 0 0 15px 15px;
+        width: 100%;
+        height: 35%;
+        background-image: url("images/illustration-sign-up-mobile.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-left: 0px;
+        -webkit-border-radius: 0 0 15px 15px;
+        -moz-border-radius: 0 0 15px 15px;
+        -ms-border-radius: 0 0 15px 15px;
+        -o-border-radius: 0 0 15px 15px;
+    }
+
+    .ali-center {
+        display: block;
+        background-color: var(--White);
+        
+    }
+
+    #success-msg {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    #success-msg img {
+    margin-top: 6rem;
+    margin-bottom:2rem;
+    }
+    #success-msg h1 {
+        margin-bottom: 1rem;
+    }
+    #success-msg p {
+        line-height: 1.5rem;
+    }
+    #success-msg button {
+        position: absolute;
+        bottom: 2rem;
+        left: 2rem;
+        width: calc(100% - 4rem);
+    }
+}
